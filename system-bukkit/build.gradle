@@ -9,8 +9,6 @@ dependencies {
 tasks {
     shadowJar {
         archiveFileName.set('System.jar')
-
-        destinationDirectory.set(file("G:/Meu Drive/Test Server 1.8.8/plugins"))
     }
 }
 
