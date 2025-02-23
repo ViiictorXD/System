@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation project(":system-core")
+}
+
+tasks {
+    shadowJar {
+        archiveFileName.set('System.jar')
+
+        destinationDirectory.set(file("G:/Meu Drive/Test Server 1.8.8/plugins"))
+    }
+}
+
+shadowJar {
+    relocate 'com.cryptomorin.xseries', 'br.com.system.bukkit.libs.xseries'
+}
+
+java {
+    sourceCompatibility = "8"
+    targetCompatibility = "8"
+}

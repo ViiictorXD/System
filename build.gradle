@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'com.github.viiictorxd'
+version = '1.0.0-SNAPSHOT'
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'com.github.johnrengelman.shadow'
+
+    repositories {
+        mavenCentral()
+
+        maven { url = uri('https://jitpack.io') }
+
+        maven { url = uri('https://repo.papermc.io/repository/maven-public/') }
+
+        maven { url = uri('https://hub.spigotmc.org/nexus/content/repositories/snapshots/') }
+
+        maven { url = uri('https://oss.sonatype.org/content/repositories/snapshots') }
+
+        maven { url = uri('https://repo.unnamed.team/repository/unnamed-public/') }
+    }
+
+    dependencies {
+        compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+
+        implementation 'com.github.cryptomorin:XSeries:13.0.0'
+
+        implementation 'org.jetbrains:annotations:26.0.1'
+
+        compileOnly 'org.projectlombok:lombok:1.18.22'
+        annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    }
+}
