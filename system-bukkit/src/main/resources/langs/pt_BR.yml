@@ -1,0 +1,171 @@
+language:
+  name: "Português do Brasil"
+  abbreviation: "pt_BR"
+player-not-found: "[action] &cJogador '%target-name%' não encontrado."
+no-permission: "[action] &cVocê não possui permissão para isso."
+only-players: "&cApenas jogadores podem executar esse comando."
+translate:
+  gamemode:
+    survival: "Sobrevivência"
+    creative: "Criativo"
+    adventure: "Aventura"
+    spectator: "Espectador"
+conversation:
+  kit:
+    create:
+      name-step:
+        - ""
+        - "&aDigite o nome do kit"
+        - "&7Caso queira cancelar, digite 'cancelar'."
+        - ""
+      permission-step:
+        - ""
+        - "&aDigite a permissão do kit"
+        - "&7Caso queira cancelar, digite 'cancelar'."
+        - ""
+      item-stacks-step:
+        - ""
+        - "&aColoque os itens no seu inventário e digite 'ok'."
+        - "&7Caso queira cancelar, digite 'cancelar'."
+        - ""
+      delay-step:
+        - ""
+        - "&aDigite o delay do kit &8(em segundos)"
+        - "&7Caso queira cancelar, digite 'cancelar'."
+        - ""
+      max-pickups-step:
+        - ""
+        - "&aDigite o máximo de vezes que pode pegar o kit &8(0 para infinito)"
+        - "&7Caso queira cancelar, digite 'cancelar'."
+        - ""
+      finished: "&aKit %kit-name% criado com sucesso."
+commands:
+  action:
+    usage: "[action] &cUse '/actionbar <mensagem>' para enviar uma mensagem na barra de ações."
+    success: "[action] &a%player-name%: %message%"
+    sent: "&aAction Bar enviado."
+  addresses:
+    usage: "[action] &cUse '/enderecos <jogador>' para ver os IP de um jogador."
+    success: "&aEndereços de '%target-name%': &f%target-addresses%&a."
+  alert:
+    usage: "&cUse '/alert <mensagem>' para enviar uma mensagem para todos os jogadores."
+    success: "&c&lALERTA: &c%message%"
+    sent: "[action] &aAlerta enviado."
+  anvil:
+    opened: "[action] &aBigorna aberta."
+  back:
+    location-not-found: "[action] &cVocê não possui um último lugar para ir."
+    teleported: "[action] &aVocê foi teleportado para sua última localização."
+  clearchat:
+    target-cleared-self: "[action] &aChat de '%target-name%' limpo."
+    target-cleared: "[action] &aChat limpo por '%player-name%'."
+    cleared: "[action] &aChat limpo."
+  clear:
+    usage: "[action] &cUse '/clear <jogador>' para limpar o inventário de um jogador."
+    cleared: "[action] &aSeu inventário foi limpo."
+    target-cleared-self: "[action] &aInventário de '%target-name%' foi limpo."
+    target-cleared: "[action] &aInventário limpo por '%player-name%'."
+  colors:
+    success: "[action] &aCores: &0&&00 &1&&11 &2&&22 &3&&33 &4&&44 &5&&55 &6&&66 &7&&77 &8&&88 &9&&99 &a&&aa &b&&bb &c&&cc &d&&dd &e&&ee &f&&ff"
+  compress:
+    empty: "[action] &cNão há minérios para compactar."
+    compressed: "[action] &a%ore-count% minério(s) compactado(s)!"
+  craft:
+    opened: "[action] &aMesa de Trabalho aberta."
+  create-kit:
+    usage: "[action] &a/criarkit &7- Criar um novo kit."
+    created: "[action] &aKit '%kit-name%' criado com sucesso."
+    operation-cancelled: "[action] &cOperação de criação de kit cancelada."
+  editsign:
+    usage: "[action] &cUse '/editsign <linha> <texto>' para editar uma placa."
+    not-found: "[action] &cPlaca não encontrada."
+    edited: "[action] &aLinha %line% da placa alterada para: %text%."
+  enchant:
+    usage: "[action] &cUse '/enchant <encantamento> <level>' para encantar um item."
+    empty-hand: "[action] &cSegure o item que deseja encantar."
+    not-found:
+      - "[action] &cEncantamento %enchant-name% não encontrado."
+      - "&cEncantamentos disponíveis: %enchants%."
+    level: "[action] &cO level do encantamento deve ser maior que zero."
+    enchanted: "[action] &aItem encantado com succeso."
+  enderchest:
+    opened: "[action] &aBaú do End aberto."
+  feed:
+    usage: "[action] &cUse '/feed <jogador>' para alimentar um jogador."
+    feed: "[action] &aVocê foi alimentado."
+    target-feed-self: "[action] &a%target-name% foi alimentado."
+    target-feed: "[action] &aVocê foi alimentado por '%player-name%'."
+  fly:
+    usage: "[action] &cUse '/fly <jogador>' para alterar o modo voar."
+    fly-on: "[action] &aModo voar ativado."
+    fly-off: "[action] &cModo voar desativado."
+    target-fly-on-self: "[action] &aModo voar de '%target-name%' ativado."
+    target-fly-on: "[action] &aModo voar ativado por '%player-name%'."
+    target-fly-off-self: "[action] &cModo voar de '%target-name%' desativado."
+    target-fly-off: "[action] &cModo voar desativado por '%player-name%'."
+  gm:
+    usage: "[action] &cUse '/gm <modo de jogo>' para alterar o modo de jogo."
+    usage-console: "[action] &cUse '/gm <modo de jogo> <jogador>' para alterar o modo de jogo de um jogador."
+    not-found: "[action] &cModo de jogo não encontrado."
+    changed: "[action] &aModo de jogo alterado para %gamemode%."
+    target-changed: "[action] &aModo de jogo alterado para %gamemode% por '%player-name%'."
+    target-changed-self: "[action] &aModo de jogo de %target-name% alterado para %gamemode%."
+  god:
+    usage: "[action] &cUse '/god <jogador>' para alterar o modo Deus."
+    god-on: "[action] &aModo Deus ativado."
+    god-off: "[action] &cModo Deus desativado."
+    target-god-on-self: "[action] &aModo Deus de '%target-name%' ativado."
+    target-god-on: "[action] &aModo Deus ativado por '%player-name%'."
+    target-god-off-self: "[action] &cModo Deus de '%target-name%' desativado."
+    target-god-off: "[action] &cModo Deus desativado por '%player-name%'."
+  hat:
+    invalid: "[action] &cChapéu inválido."
+    changed: "[action] &aAproveite seu novo chápeu!"
+  heal:
+    usage: "[action] &cUse '/heal <jogador>' para curar um jogador."
+    healed: "[action] &aVocê foi curado."
+    target-healed-self: "[action] &a%target-name% foi curado."
+    target-healed: "[action] &aVocê foi curado por '%player-name%'."
+  invsee:
+    usage: "[action] &cUse '/invsee <jogador>' para ver o inventário de um jogador."
+    target-inv: "[action] &a%player-name% abriu seu inventário."
+    opened: "[action] &aInventário de '%target-name%' aberto."
+  kit:
+    usage: "[action] &cUse '/kit <nome>' para pegar um kit."
+    not-found: "[action] &cKit %kit-name% nao encontrado."
+    received: "[action] &aKit %kit-name% recebido."
+    no-permission: "[action] &cVocê não tem permissão para pegar esse kit."
+    space-enough: "[action] &cVocê não tem espaço suficiente para pegar esse kit."
+    dropped: "&cVocê não tinha espaço no inventário e alguns itens foram dropados no chão."
+    in-delay: "[action] &cAguarde %kit-delay% para pegar esse kit novamente."
+    max-reached: "[action] &cVocê já pegou esse kit o máximo que é permitido &8(%kit-max-pickups%)"
+  light:
+    usage: "[action] &cUse '/light <jogador>' para alterar o modo luz."
+    light-on: "[action] &aModo luz ativado."
+    light-off: "[action] &cModo luz desativado."
+    target-light-on-self: "[action] &aModo luz de '%target-name%' ativado."
+    target-light-on: "[action] &aModo luz ativado por '%player-name%'."
+    target-light-off-self: "[action] &cModo luz de '%target-name%' desativado."
+    target-light-off: "[action] &cModo luz desativado por '%player-name%'."
+  melt:
+    no-one: "[action] &cNão há minérios para derreter."
+    melted: "[action] &a%ore-count% minério(s) derretido(s)!"
+  nick:
+    usage: "[action] &cUse '/nick <apelido>' para mudar o apelido de um jogador."
+    invalid: "[action] &cApelido inválido."
+    changed: "[action] &aSeu apelido foi alterado para: %nick%."
+  online:
+    success: "[action] &aJogadores online: %players%/%max-players%."
+  potion:
+    usage: "[action] &cUse '/potion <tipo> <duração> <amplificador>' para aplicar um efeito em uma poção."
+    not-potion: "[action] &cSegure uma pocão para aplicar os efeitos."
+    not-found: "[action] &cTipo de pocão inválido."
+    invalid-amplifier: "[action] &cAmplificador inválido."
+    invalid-duration: "[action] &cDuração inválido."
+    applied: "[action] &aEfeito aplicado."
+  tpall:
+    usage: "[action] &cUse '/tpall <jogador>' para teleportar todos os jogadores."
+    tpall: "[action] &aTodos os jogadores foram teleportados até você."
+    target-tpall: "[action] &aTodos os jogadores foram teleportados para '%target-name%'."
+  trash:
+    opened: "[action] &aLixeira aberta."

@@ -1,0 +1,5 @@
+name: System
+version: 2.0.0
+main: br.com.system.bukkit.SystemPlugin
+authors: [ViiictorXD]
+website: https://github.com/ViiictorXD/System

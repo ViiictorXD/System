@@ -1,0 +1,45 @@
+# Linguagem que será usado nas mensagens
+language: "pt_BR"
+# Configuração geral do banco de dados
+database:
+  type: "sqlite"
+  properties:
+    host: "localhost"
+    username: "root"
+    password: ""
+    database: "minecraft"
+# Configuração do nick
+nick-settings:
+  format: "[A-Za-z0-9_]{6,16}"
+# Configuração da lixeira
+trash-settings:
+  title: "Lixeira"
+  size: 6
+# Configuração geral dos eventos
+events-settings:
+  join-message: "&a&l+ &a%player-name% entrou no servidor."
+  quit-message: "&c&l- &c%player-name% saiu do servidor."
+  death-message: "&4&l- &4%player-name% morreu."
+  weather-change:
+    cancel-worlds: ["spawn", "outroMundo"]
+  cancel-open-container-types: ["dropper", "dispenser", "enchanting"]
+  void-damage:
+    cancel: true
+    teleport-to-warp: "spawn"
+  cancel-bed-enter: false
+  blocked-commands:
+    - "plugins"
+    - "minecraft:plugins"
+  cancel-ice-water: true
+  cancel-recipes: ["diamond_sword"]
+  cancel-create-portal: true
+  cancel-melt-snow: true
+  cancel-explode-items: true
+  double-login:
+    cancel: true
+    kick-message: "&cUma conta com esse nome já está jogando."
+  cancel-break-farm-jumping: true
+# Configuração geral dos kits
+kits-settings:
+  # O kit deve ser dropado caso o inventário esteja cheio?
+  drop-if-full: true

@@ -1,0 +1,228 @@
+commands:
+  actionbar:
+    key: "ActionBar"
+    description: "Envie um mensagem em ActionBar para todos do servidor."
+    usage: "&cUse '/actionbar <mensagem>'."
+    alias: ["action", "ab"]
+    permission-setting:
+      permission: "system.commands.actionbar"
+      message: "&cVocê não possui permissão para executar esse comando."
+  addresses:
+    key: "Addresses"
+    description: "Vê todos os IP de um jogador."
+    usage: "&cUse '/enderecos <jogador>'."
+    alias: ["enderecos", "ip", "ips"]
+    permission-setting:
+      permission: "system.commands.addresses"
+      message: "&cVocê não possui permissão para executar esse comando."
+  alert:
+    key: "Alert"
+    description: "Envie uma mensagem de alerta para todos do servidor."
+    usage: "&cUse '/alerta <mensagem>'."
+    alias: ["alerta"]
+    permission-setting:
+      permission: "system.commands.alert"
+      message: "&cVocê não possui permissão para executar esse comando."
+  anvil:
+    key: "Anvil"
+    description: "Abra uma bigorna virtual."
+    usage: "&cUse '/bigorna'."
+    alias: ["bigorna"]
+    permission-setting:
+      permission: "system.commands.anvil"
+      message: "&cVocê não possui permissão para executar esse comando."
+  back:
+    key: "Back"
+    description: "Volte para seu último lugar."
+    usage: "&cUse '/voltar'."
+    alias: ["voltar"]
+    permission-setting:
+      permission: "system.commands.back"
+      message: "&cVocê não possui permissão para executar esse comando."
+  clearchat:
+    key: "ClearChat"
+    description: "Limpar o chat global ou de um jogador."
+    usage: "&cUse '/cc [jogador]'."
+    alias: ["limparchat", "cc"]
+    permission-setting:
+      permission: "system.commands.clearchat"
+      message: "&cVocê não possui permissão para executar esse comando."
+  clear:
+    key: "Clear"
+    description: "Limpe seu inventário ou de um jogador."
+    usage: "&cUse '/limpar [jogador]'."
+    alias: ["limpar"]
+    permission-setting:
+      permission: "system.commands.clear"
+      message: "&cVocê não possui permissão para executar esse comando."
+  colors:
+    key: "Colors"
+    description: "Mostra todos os códigos de cores do servidor."
+    usage: "&cUse '/cores'."
+    alias: ["cores"]
+    permission-setting:
+      permission: "system.commands.colors"
+      message: "&cVocê não possui permissão para executar esse comando."
+  compress:
+    key: "Compress"
+    description: "Compacta todos os minérios."
+    usage: "&cUse '/compactar'."
+    alias: ["compactar"]
+    permission-setting:
+      permission: "system.commands.compress"
+      message: "&cVocê não possui permissão para executar esse comando."
+  craft:
+    key: "Craft"
+    description: "Abre uma mesa de trabalho virtual."
+    usage: "&cUse '/craft'."
+    permission-setting:
+      permission: "system.commands.craft"
+      message: "&cVocê não possui permissão para executar esse comando."
+  createkit:
+    key: "CreateKit"
+    description: "Cria um novo kit."
+    usage: "&cUse '/criarkit'."
+    alias: ["criarkit"]
+    permission-setting:
+      permission: "system.commands.createkit"
+      message: "&cVocê não possui permissão para executar esse comando."
+  editsign:
+    key: "EditSign"
+    description: "Edita uma placa."
+    usage: "&cUse '/editarplaca <linha> <novo valor>'."
+    alias: ["editarplaca"]
+    permission-setting:
+      permission: "system.commands.editsign"
+      message: "&cVocê não possui permissão para executar esse comando."
+  enchant:
+    key: "Enchant"
+    description: "Encanta o item que está na sua mão."
+    usage: "&cUse '/encantar <encantamento> <level>'."
+    alias: ["encantar"]
+    permission-setting:
+      permission: "system.commands.enchant"
+      message: "&cVocê não possui permissão para executar esse comando."
+  enderchest:
+    key: "EnderChest"
+    description: "Abre o seu baú do fim ou de um jogador."
+    usage: "&cUse '/ec [jogador]'."
+    alias: ["ec"]
+    permission-setting:
+      permission: "system.commands.enderchest"
+      message: "&cVocê não possui permissão para executar esse comando."
+  feed:
+    key: "Feed"
+    description: "Sacia sua fome ou de um jogador."
+    usage: "&cUse '/feed [jogador]'."
+    alias: ["comida"]
+    permission-setting:
+      permission: "system.commands.feed"
+      message: "&cVocê não possui permissão para executar esse comando."
+  fly:
+    key: "Fly"
+    description: "Ativa/desativa seu modo voar ou de um jogador."
+    usage: "&cUse '/voar [jogador]'."
+    alias: ["voar"]
+    permission-setting:
+      permission: "system.commands.fly"
+      message: "&cVocê não possui permissão para executar esse comando."
+  gamemode:
+    key: "GameMode"
+    description: "Altera seu modo de jogo ou de um jogador."
+    usage: "&cUse '/gm <modo> [jogador]'."
+    alias: ["gm"]
+    permission-setting:
+      permission: "system.commands.gamemode"
+      message: "&cVocê não possui permissão para executar esse comando."
+  god:
+    key: "God"
+    description: "Altera seu modo Deus ou de um jogador."
+    usage: "&cUse '/god'."
+    alias: ["deus"]
+    permission-setting:
+      permission: "system.commands.god"
+      message: "&cVocê não possui permissão para executar esse comando."
+  hat:
+    key: "Hat"
+    description: "Coloca um bloco na cabeça."
+    usage: "&cUse '/chapeu'."
+    alias: ["chapeu"]
+    permission-setting:
+      permission: "system.commands.hat"
+      message: "&cVocê não possui permissão para executar esse comando."
+  heal:
+    key: "Heal"
+    description: "Cura você ou um jogador."
+    usage: "&cUse '/curar [jogador]'."
+    alias: ["curar"]
+    permission-setting:
+      permission: "system.commands.heal"
+      message: "&cVocê não possui permissão para executar esse comando."
+  invsee:
+    key: "Invsee"
+    description: "Abre o inventário de um jogador."
+    usage: "&cUse '/is <jogador>'."
+    alias: ["is"]
+    permission-setting:
+      permission: "system.commands.invsee"
+      message: "&cVocê não possui permissão para executar esse comando."
+  kit:
+    key: "Kit"
+    description: "Coleta os itens de um kit."
+    usage: "&cUse '/kit <nome>'."
+    permission-setting:
+      permission: "system.commands.kit"
+      message: "&cVocê não possui permissão para executar esse comando."
+  light:
+    key: "Light"
+    description: "Liga/desliga a luz."
+    usage: "&cUse '/luz'."
+    alias: ["luz"]
+    permission-setting:
+      permission: "system.commands.light"
+      message: "&cVocê não possui permissão para executar esse comando."
+  melt:
+    key: "Melt"
+    description: "Derrete os seus minérios."
+    usage: "&cUse '/derreter'."
+    alias: ["derreter"]
+    permission-setting:
+      permission: "system.commands.melt"
+      message: "&cVocê não possui permissão para executar esse comando."
+  nick:
+    key: "Nick"
+    description: "Altera seu Display Name."
+    usage: "&cUse '/nick <novo nick>'."
+    permission-setting:
+      permission: "system.commands.nick"
+      message: "&cVocê não possui permissão para executar esse comando."
+  online:
+    key: "Online"
+    description: "Mostra quantos usuários tem online."
+    usage: "&cUse '/online'."
+    permission-setting:
+      permission: "system.commands.online"
+      message: "&cVocê não possui permissão para executar esse comando."
+  potion:
+    key: "Potion"
+    description: "Adiciona um efeito numa poção."
+    usage: "&cUse '/pocao <efeito> <duração> <amplificador>'."
+    alias: ["pocao"]
+    permission-setting:
+      permission: "system.commands.potion"
+      message: "&cVocê não possui permissão para executar esse comando."
+  tpall:
+    key: "Tpall"
+    description: "Teleporta todos para uma localidade ou para um jogador."
+    usage: "&cUse '/tpall [jogador]'."
+    permission-setting:
+      permission: "system.commands.tpall"
+      message: "&cVocê não possui permissão para executar esse comando."
+  trash:
+    key: "Trash"
+    description: "Abre uma lixeira virtual."
+    usage: "&cUse '/lixeira'."
+    alias: ["lixeira"]
+    permission-setting:
+      permission: "system.commands.trash"
+      message: "&cVocê não possui permissão para executar esse comando."
