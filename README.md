@@ -19,4 +19,4 @@ Compartilhe as suas ideias, tire dúvidas e conecte-se com outros criadores de s
 
 ## Aviso
 
-Este projeto ainda está em desenvolvimento e novos recursos estão a ser adicionados constantemente. Fique atento às atualizações e participe da construção do futuro do Omni!
+Este projeto ainda está em desenvolvimento e novos recursos estão a ser adicionados constantemente. Fique atento às atualizações e participe da construção do futuro do System!
