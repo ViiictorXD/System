@@ -3,16 +3,14 @@ package br.com.system.core;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.bukkit.Bukkit;
+import org.jetbrains.annotations.NotNull;
 
 @Getter
 @AllArgsConstructor
 public enum BukkitNMSVersion {
 
-  V1_20_5(205, "v1.20.5"),
-  V1_20_4(204, "v1.20.4"),
-  V1_20_3(203, "v1.20.3"),
-  V1_20_2(202, "v1.20.2"),
-  V1_20_1(201, "v1.20.1"),
+  V1_22(22, "v1.22"),
+  V1_21(21, "v1.21"),
   V1_20(20, "v1.20"),
   V1_19(19, "v1.19"),
   V1_18(18, "v1.18"),
@@ -32,7 +30,7 @@ public enum BukkitNMSVersion {
   private final int versionId;
   private final String simpleName;
 
-  public boolean higherThan(BukkitNMSVersion version) {
+  public boolean higherThan(@NotNull BukkitNMSVersion version) {
     return versionId > version.getVersionId();
   }
 
@@ -40,12 +38,9 @@ public enum BukkitNMSVersion {
     return directFrom(Bukkit.getVersion());
   }
 
-  public static BukkitNMSVersion directFrom(String packageName) {
-    if (packageName.contains("1.25")) return V1_20_5;
-    if (packageName.contains("1.24")) return V1_20_4;
-    if (packageName.contains("1.23")) return V1_20_3;
-    if (packageName.contains("1.22")) return V1_20_2;
-    if (packageName.contains("1.21")) return V1_20_1;
+  public static BukkitNMSVersion directFrom(@NotNull String packageName) {
+    if (packageName.contains("1.22")) return V1_22;
+    if (packageName.contains("1.21")) return V1_21;
     if (packageName.contains("1.20")) return V1_20;
     if (packageName.contains("1.19")) return V1_19;
     if (packageName.contains("1.18")) return V1_18;

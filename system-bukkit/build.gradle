@@ -2,6 +2,8 @@ plugins {
     id 'java'
 }
 
+tasks.build.dependsOn("shadowJar")
+
 dependencies {
     implementation project(":system-core")
 }
@@ -14,6 +16,7 @@ tasks {
 
 shadowJar {
     relocate 'com.cryptomorin.xseries', 'br.com.system.bukkit.libs.xseries'
+    relocate "com.tcoded.folialib", "br.com.system.bukkit.libs.folialib"
 }
 
 java {
