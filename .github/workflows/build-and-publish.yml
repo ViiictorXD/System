@@ -36,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: system-bukkit-jar
-          path: src/system-bukkit/build/libs/System.jar
+          path: system-bukkit/build/libs/System.jar
