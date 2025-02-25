@@ -1,0 +1,39 @@
+name: build-and-publish
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar o JDK 8
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+
+      - name: Conceder permissão para Gradle
+        run: chmod +x gradlew
+
+      - name: Build do projeto com Gradle
+        run: ./gradlew clean build
+
+      - name: Salvar artefato (System.jar)
+        uses: actions/upload-artifact@v4
+        with:
+          name: system-bukkit-jar
+          path: src/system-bukkit/build/libs/System.jar
