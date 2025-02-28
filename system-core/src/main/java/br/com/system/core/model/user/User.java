@@ -36,6 +36,7 @@ public class User extends Identifier {
    Location spawnLocation,
    Location lastLocation,
    List<Address> addresses,
+   List<UserKit> kits,
    Instant firstAt,
    Instant lastAt
   ) {
@@ -44,6 +45,7 @@ public class User extends Identifier {
     this.spawnLocation = spawnLocation;
     this.lastLocation = lastLocation;
     this.addresses = addresses;
+    this.kits = kits;
     this.firstAt = firstAt;
     this.lastAt = lastAt;
   }

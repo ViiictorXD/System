@@ -19,7 +19,7 @@ public class Kit {
 
   private int maxPickups;
 
-  public int getKitCount() {
+  public int getKitItemsCount() {
     return itemStacks.length;
   }
 }

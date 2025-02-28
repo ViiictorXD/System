@@ -12,7 +12,7 @@ public class UserKit {
   private int pickupCount;
   private long lastPickup;
 
-  public long getNextPickup() {
-    return System.currentTimeMillis() + lastPickup;
+  public long getNextPickup(long kitDelay) {
+    return lastPickup + kitDelay;
   }
 }

@@ -13,7 +13,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class KitCommand extends BaseCommand {
 
@@ -64,9 +63,9 @@ public class KitCommand extends BaseCommand {
     }
 
     if (!player.hasPermission("system.kit.delay.bypass")
-     && userKit.getNextPickup() > System.currentTimeMillis()) {
+     && userKit.getNextPickup(kit.getDelay()) > System.currentTimeMillis()) {
       plugin.getExecutor().msg(player, "commands.kit.in-delay",
-       "%kit-delay%", TimeFormatter.format(System.currentTimeMillis() - userKit.getNextPickup())
+       "%kit-delay%", TimeFormatter.format(userKit.getNextPickup(kit.getDelay()) - System.currentTimeMillis())
       );
       return;
     }
@@ -79,7 +78,7 @@ public class KitCommand extends BaseCommand {
       return;
     }
 
-    if (!plugin.getSettings().isDropIfFull() && PlayerUtil.getPlayerInventorySpace(player) < kit.getKitCount()) {
+    if (!plugin.getSettings().isDropIfFull() && PlayerUtil.getPlayerInventorySpace(player) < kit.getKitItemsCount()) {
       plugin.getExecutor().msg(player, "commands.kit.space-enough");
       return;
     }
@@ -92,13 +91,8 @@ public class KitCommand extends BaseCommand {
 
     HashMap<Integer, ItemStack> remainingItemMap = player.getInventory().addItem(kit.getItemStacks());
     if (!remainingItemMap.isEmpty()) {
-      for (Map.Entry<Integer, ItemStack> entry : remainingItemMap.entrySet()) {
-        Integer key = entry.getKey();
-        ItemStack value = entry.getValue();
-
-        value.setAmount(key);
-
-        player.getWorld().dropItemNaturally(player.getLocation(), value);
+      for (ItemStack item : remainingItemMap.values()) {
+        player.getWorld().dropItemNaturally(player.getLocation(), item);
       }
 
       plugin.getExecutor().msg(player, "commands.kit.dropped");

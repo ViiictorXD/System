@@ -121,8 +121,8 @@ public class UserRepository implements Repository {
          "id CHAR(36) NOT NULL, " +
          "name VARCHAR(32) NOT NULL, " +
          "display VARCHAR(64) NOT NULL, " +
-         "spawn_location VARCHAR(128) NOT NULL, " +
-         "last_location VARCHAR(128) NOT NULL, " +
+         "spawn_location VARCHAR(128) NULL, " +
+         "last_location VARCHAR(128) NULL, " +
          "first_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, " +
          "last_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, " +
          "PRIMARY KEY (id)" +
@@ -155,6 +155,7 @@ public class UserRepository implements Repository {
      spawnLocation,
      lastLocation,
      addresses,
+     kits,
      firstAt,
      lastAt
     );

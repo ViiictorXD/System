@@ -52,7 +52,7 @@ public class UserKitRepository implements Repository {
           ps.setString(1, user.getId().toString());
           ps.setString(2, kit.getKitName());
           ps.setInt(3, kit.getPickupCount());
-          ps.setLong(4, kit.getNextPickup());
+          ps.setLong(4, kit.getLastPickup());
           ps.executeUpdate();
         }
       } catch (SQLException exception) {
@@ -70,7 +70,7 @@ public class UserKitRepository implements Repository {
 
         try (PreparedStatement ps = connection.prepareStatement("UPDATE system_users_kits SET pickup_count = ?, last_pickup = ? WHERE kit_name = ? AND id = ?")) {
           ps.setInt(1, kit.getPickupCount());
-          ps.setLong(2, kit.getNextPickup());
+          ps.setLong(2, kit.getLastPickup());
           ps.setString(3, kit.getKitName());
           ps.setString(4, user.getId().toString());
           ps.executeUpdate();
