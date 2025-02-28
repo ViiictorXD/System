@@ -114,7 +114,7 @@ commands:
     key: "Feed"
     description: "Sacia sua fome ou de um jogador."
     usage: "&cUse '/feed [jogador]'."
-    alias: ["comida"]
+    alias: ["comida", "fome"]
     permission-setting:
       permission: "system.commands.feed"
       message: "&cVocê não possui permissão para executar esse comando."
@@ -222,7 +222,7 @@ commands:
     key: "Trash"
     description: "Abre uma lixeira virtual."
     usage: "&cUse '/lixeira'."
-    alias: ["lixeira"]
+    alias: ["lixeira", "lixo"]
     permission-setting:
       permission: "system.commands.trash"
       message: "&cVocê não possui permissão para executar esse comando."

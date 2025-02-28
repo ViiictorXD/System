@@ -28,7 +28,7 @@ public class FeedCommand extends BaseCommand {
         return;
       }
 
-      target.setAllowFlight(!target.getAllowFlight());
+      target.setFoodLevel(20);
 
       if (args.length == 1 || !args[1].equalsIgnoreCase("-s")) {
         system.getExecutor().msg(target, "commands.feed.target-feed", "%player-name%", sender.getName());

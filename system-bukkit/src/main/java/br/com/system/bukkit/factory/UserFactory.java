@@ -11,7 +11,7 @@ import java.util.UUID;
 public class UserFactory {
 
   public User createUser(UUID id, String name, String display, Location spawnLocation, Location lastLocation) {
-    return new User(id, name, display, spawnLocation, lastLocation, new ArrayList<>(), Instant.now(), Instant.now());
+    return new User(id, name, display, spawnLocation, lastLocation, new ArrayList<>(), new ArrayList<>(), Instant.now(), Instant.now());
   }
 
   public User createUser(Player player) {
