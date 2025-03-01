@@ -3,17 +3,22 @@ package br.com.system.bukkit.command;
 import br.com.system.bukkit.SystemPlugin;
 import br.com.system.core.command.BaseCommand;
 import br.com.system.core.command.CommandInfo;
+import com.tcoded.folialib.FoliaLib;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerTeleportEvent;
 
 public class TpallCommand extends BaseCommand {
 
-  private final SystemPlugin system;
+  private final SystemPlugin plugin;
+  private final FoliaLib foliaLib;
 
-  public TpallCommand(CommandInfo info, SystemPlugin system) {
+  public TpallCommand(CommandInfo info, SystemPlugin plugin) {
     super(info);
-    this.system = system;
+    this.plugin = plugin;
+    this.foliaLib = new FoliaLib(plugin);
   }
 
   @Override
@@ -22,28 +27,29 @@ public class TpallCommand extends BaseCommand {
       Player target = Bukkit.getPlayer(args[0]);
 
       if (target == null) {
-        system.getExecutor().msg(sender, "player-not-found", "%target-name%", args[0]);
+        plugin.getExecutor().msg(sender, "player-not-found", "%target-name%", args[0]);
         return;
       }
 
       teleportTo(target);
-      system.getExecutor().msg(sender, "commands.tpall.target-tpall", "%target-name%", target.getName());
+      plugin.getExecutor().msg(sender, "commands.tpall.target-tpall", "%target-name%", target.getName());
       return;
     }
 
     if (sender instanceof Player) {
       teleportTo((Player) sender);
-      system.getExecutor().msg(sender, "commands.tpall.tpall");
+      plugin.getExecutor().msg(sender, "commands.tpall.tpall");
       return;
     }
 
-    system.getExecutor().msg(sender, "commands.tpall.usage");
+    plugin.getExecutor().msg(sender, "commands.tpall.usage");
   }
 
   private void teleportTo(Player player) {
+    Location playerLocation = player.getLocation();
     for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
       if (onlinePlayer.getUniqueId().equals(player.getUniqueId())) continue;
-      onlinePlayer.teleport(player);
+      foliaLib.getScheduler().teleportAsync(onlinePlayer, playerLocation, PlayerTeleportEvent.TeleportCause.PLUGIN);
     }
   }
 }

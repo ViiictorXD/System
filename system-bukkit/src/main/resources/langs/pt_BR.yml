@@ -132,7 +132,7 @@ commands:
     opened: "[action] &aInventário de '%target-name%' aberto."
   kit:
     usage: "[action] &cUse '/kit <nome>' para pegar um kit."
-    not-found: "[action] &cKit %kit-name% nao encontrado."
+    not-found: "[action] &cKit %kit-name% não encontrado."
     received: "[action] &aKit %kit-name% recebido."
     no-permission: "[action] &cVocê não tem permissão para pegar esse kit."
     space-enough: "[action] &cVocê não tem espaço suficiente para pegar esse kit."

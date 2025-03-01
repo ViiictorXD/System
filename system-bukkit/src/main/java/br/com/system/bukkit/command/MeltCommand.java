@@ -1,10 +1,10 @@
 package br.com.system.bukkit.command;
 
+import br.com.system.bukkit.SystemPlugin;
 import br.com.system.bukkit.types.SystemOreType;
 import br.com.system.core.command.BaseCommand;
 import br.com.system.core.command.CommandInfo;
 import com.cryptomorin.xseries.XMaterial;
-import br.com.system.bukkit.SystemPlugin;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -52,6 +52,7 @@ public class MeltCommand extends BaseCommand {
       inventory.remove(itemStack);
 
       ItemStack oreAsBlock = systemOreType.getMaterial().parseItem();
+      if (oreAsBlock == null) continue;
       oreAsBlock.setAmount(itemStack.getAmount());
 
       inventory.addItem(oreAsBlock);

@@ -11,7 +11,7 @@ public enum SystemGameMode {
   SURVIVAL(GameMode.SURVIVAL, "survival", "sobrevivencia", "s", "0"),
   CREATIVE(GameMode.CREATIVE, "creative", "criativo", "c", "1"),
   ADVENTURE(GameMode.ADVENTURE, "adventure", "aventura", "a", "2"),
-  SPECTATOR(GameMode.SPECTATOR, "spectator", "espectador", "3");
+  SPECTATOR(GameMode.SPECTATOR, "spectator", "espectador", "e", "3");
 
   private final GameMode gameMode;
   private final String[] aliases;

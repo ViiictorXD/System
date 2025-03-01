@@ -4,17 +4,21 @@ import br.com.system.bukkit.SystemPlugin;
 import br.com.system.core.command.BaseCommand;
 import br.com.system.core.command.CommandInfo;
 import br.com.system.core.model.user.User;
+import com.tcoded.folialib.FoliaLib;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerTeleportEvent;
 
 public class BackCommand extends BaseCommand {
 
   private final SystemPlugin plugin;
+  private final FoliaLib foliaLib;
 
   public BackCommand(CommandInfo info, SystemPlugin plugin) {
     super(info);
     this.plugin = plugin;
+    this.foliaLib = new FoliaLib(plugin);
   }
 
   @Override
@@ -34,7 +38,7 @@ public class BackCommand extends BaseCommand {
       return;
     }
 
-    player.teleport(lastLocation);
+    foliaLib.getScheduler().teleportAsync(player, lastLocation, PlayerTeleportEvent.TeleportCause.PLUGIN);
     plugin.getExecutor().msg(sender, "commands.back.teleported");
   }
 }

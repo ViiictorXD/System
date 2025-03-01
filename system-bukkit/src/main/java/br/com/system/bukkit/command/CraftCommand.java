@@ -24,7 +24,7 @@ public class CraftCommand extends BaseCommand {
       return;
     }
 
-    ((Player) sender).openInventory(Bukkit.createInventory(null, InventoryType.ANVIL));
+    ((Player) sender).openInventory(Bukkit.createInventory(null, InventoryType.WORKBENCH));
     plugin.getExecutor().msg(sender, "commands.craft.opened");
   }
 }
