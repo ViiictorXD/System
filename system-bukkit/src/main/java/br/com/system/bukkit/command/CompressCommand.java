@@ -1,10 +1,10 @@
 package br.com.system.bukkit.command;
 
+import br.com.system.bukkit.SystemPlugin;
 import br.com.system.bukkit.types.SystemOreType;
 import br.com.system.core.command.BaseCommand;
 import br.com.system.core.command.CommandInfo;
 import com.cryptomorin.xseries.XMaterial;
-import br.com.system.bukkit.SystemPlugin;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -65,12 +65,15 @@ public class CompressCommand extends BaseCommand {
 
       inventory.remove(itemStack);
 
-      ItemStack oreAsBlock = systemOreType.getBlock().parseItem();
-      oreAsBlock.setAmount(giveAmount);
-      inventory.addItem(oreAsBlock);
+      ItemStack oreAsResult = systemOreType.getResult().parseItem();
+      if (oreAsResult == null) continue;
+
+      oreAsResult.setAmount(giveAmount);
+      inventory.addItem(oreAsResult);
 
       if (giveBackAmount > 0) {
         ItemStack oreAsSimple = systemOreType.getMaterial().parseItem();
+        if (oreAsSimple == null) continue;
         oreAsSimple.setAmount(giveBackAmount);
 
         giveBack.add(oreAsSimple);

@@ -1,30 +1,16 @@
 package br.com.system.core;
 
-import com.cryptomorin.xseries.XMaterial;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
+
+import java.util.Arrays;
 
 public class PlayerUtil {
 
   public static int getPlayerInventorySpace(Player player) {
-    PlayerInventory inventory = player.getInventory();
-
-    int inventorySpace = 0;
-
-    for (ItemStack itemStack : inventory.getContents()) {
-      if (itemStack == null) {
-        inventorySpace++;
-        continue;
-      }
-
-      XMaterial material = XMaterial.matchXMaterial(itemStack);
-
-      if (material.name().contains("AIR")) {
-        inventorySpace++;
-        continue;
-      }
-    }
-    return inventorySpace;
+    return (int) Arrays
+            .stream(player.getInventory().getContents())
+            .filter(i -> i != null && i.getType() != Material.AIR)
+            .count();
   }
 }

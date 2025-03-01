@@ -56,6 +56,6 @@ public class CommandService implements Service {
      SystemPlugin.class
     ).newInstance(commandInfo, plugin);
 
-    commandMap.register(commandInfo.getName(), baseCommand);
+    commandMap.register(plugin.getName().toLowerCase(), baseCommand);
   }
 }

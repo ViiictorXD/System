@@ -40,7 +40,7 @@ public class HealCommand extends BaseCommand {
 
     if (sender instanceof Player) {
       Player player = (Player) sender;
-      player.setMaxHealth(20D);
+      player.setHealth(20D);
       system.getExecutor().msg(player, "commands.heal.healed");
       return;
     }

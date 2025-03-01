@@ -1,6 +1,7 @@
 package br.com.system.bukkit.command;
 
 import br.com.system.bukkit.SystemPlugin;
+import br.com.system.bukkit.SystemUtil;
 import br.com.system.core.command.BaseCommand;
 import br.com.system.core.command.CommandInfo;
 import org.bukkit.Bukkit;
@@ -36,7 +37,7 @@ public class LightCommand extends BaseCommand {
         target.removePotionEffect(PotionEffectType.NIGHT_VISION);
         path += "off";
       } else {
-        target.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, Integer.MAX_VALUE, 1));
+        target.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, SystemUtil.INFINITE_POTION_DURATION, 0, false, false));
         path += "on";
       }
 
@@ -57,7 +58,7 @@ public class LightCommand extends BaseCommand {
         return;
       }
 
-      player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, Integer.MAX_VALUE, 1));
+      player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, SystemUtil.INFINITE_POTION_DURATION, 0, false, false));
       system.getExecutor().msg(sender, "commands.light.light-on");
       return;
     }
